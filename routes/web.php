@@ -24,7 +24,7 @@ Route::middleware(['auth', 'verified'])
         ->group(function() {
             // qui ci metto tutte le rotte che voglio che siano:
                 
-            Route::get('/', [DashboardController::class, 'index'])->name('index');
+            Route::get('/', [DashboardController::class, 'index'])->name('admin');
         }
 );
 
