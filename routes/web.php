@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,7 @@ Route::middleware(['auth', 'verified'])
         ->name('admin.')
         ->prefix('admin')
         ->group(function() {
-            // qui ci metto tutte le rotte che voglio che siano:
+            Route::resource('projects', ProjectController::class);
                 
             Route::get('/', [DashboardController::class, 'index'])->name('admin');
         }
