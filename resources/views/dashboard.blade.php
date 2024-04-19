@@ -31,7 +31,7 @@
             </div>
 
             <button class="btn btn-danger mt-5" >
-                <a class="text-decoration-none text-white text-capitalize" href="{{ url('admin/projects') }}">{{__('Vedi i progetti caricati')}}</a>
+                <a class="text-decoration-none text-white text-capitalize" href="{{route('admin.projects.index')}}"">{{__('Vedi i progetti caricati')}}</a>
                 
             </button>
 

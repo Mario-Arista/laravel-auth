@@ -30,7 +30,18 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newProject = new Project();
+
+        // Compilazione pre fillable:
+        $newProject->name = $request->name;
+        $newProject->description = $request->description;
+        $newProject->develop_with = $request->develop_with;
+        $newProject->link_github = $request->link_github;
+        $newProject->image = $request->image;
+
+        $newProject->save();
+
+        return redirect()->route('admin.projects.index');
     }
 
     /**
