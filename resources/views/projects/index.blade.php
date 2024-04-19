@@ -7,7 +7,7 @@
 @section('content')
 <div class="container py-5">
 
-    <button class="btn btn-danger mt-5 mb-5" >
+    <button class="btn btn-danger mt-1 mb-5" >
         <a class="text-decoration-none text-white text-capitalize" href="{{route('admin.projects.create')}}">{{__('CREA NUOVO PROGETTO')}}</a>
     </button>
 
@@ -16,16 +16,16 @@
     <div class="row">
 
         @foreach ($projects as $project)
-        <div class="col-lg-2 col-md-6 mb-4">
+        <div class="col-lg-3 col-md-3 mb-3">
 
-            <div class="project">
+            <div class="project d-flex flex-column align-items-center justify-content-between gap-2">
                 <img class="img-fluid" src="{{$project->image}}" alt="{{$project->name}}">
                 <div>
                     <Strong class="text-danger">Nome:</Strong>
                     {{$project->name}}
                 </div>
-                <button class="btn btn-danger mt-5" >
-                    <a class="text-decoration-none text-white text-uppercase" href="{{route('admin.projects.show', $project->id)}}">{{__('Vedi progetto caricato')}}</a>
+                <button class="btn btn-danger" >
+                    <a class="text-decoration-none text-white text-uppercase" href="{{route('admin.projects.show', $project->id)}}">{{__('Modifica / elimina')}}</a>
                 </button>
             </div>
             

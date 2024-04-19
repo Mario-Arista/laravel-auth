@@ -11,4 +11,7 @@ class Project extends Model
     use HasFactory;
 
     use SoftDeletes;
+
+    protected $fillable = [ 'name', 'description', 'develop_with', 'link_github', 'image'];
+    
 }
