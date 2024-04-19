@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-    Progetti caricati
+    Progetto singolo
 @endsection
 
 @section('content')
 <div class="container py-5">
-    <h1>Progetti caricati</h1>
+    <h1>Progetto caricato</h1>
 </div>
 @endsection

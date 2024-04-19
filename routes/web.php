@@ -23,8 +23,14 @@ Route::middleware(['auth', 'verified'])
         ->name('admin.')
         ->prefix('admin')
         ->group(function() {
-            Route::resource('projects', ProjectController::class);
-                
+            Route::resource('/projects', ProjectController::class);
+
+            // Route::get('/admin', [ProjectController::class, 'index'])->name('projects.index');
+            // Route::get('/admin', [ProjectController::class, 'edit'])->name('projects.edit');
+            // Route::get('/admin', [ProjectController::class, 'create'])->name('projects.create');
+            // Route::get('/admin', [ProjectController::class, 'update'])->name('projects.update');
+            // Route::get('/admin', [ProjectController::class, 'destroy'])->name('projects.destroy');
+
             Route::get('/', [DashboardController::class, 'index'])->name('admin');
         }
 );

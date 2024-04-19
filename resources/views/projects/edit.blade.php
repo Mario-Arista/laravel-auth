@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-    Progetti caricati
+    Cambia Progetto
 @endsection
 
 @section('content')
 <div class="container py-5">
-    <h1>Progetti caricati</h1>
+    <h1>Per cambiare progetto</h1>
 </div>
 @endsection
