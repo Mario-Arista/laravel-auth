@@ -34,13 +34,11 @@
                     <label for="description" class="form-label">Descrizione</label>
                     <textarea type="text" class="form-control" id="description" name="description" rows="5" required>{{ old('description') }}</textarea>
                 </div>
-                
+
                 <button type="submit" class="btn btn-danger mt-5 mb-5">Salva</button>
 
             </form>
-
-
-            
+   
         </div>
         
     </div>

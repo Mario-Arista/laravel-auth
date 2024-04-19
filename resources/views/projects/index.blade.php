@@ -25,7 +25,7 @@
                     {{$project->name}}
                 </div>
                 <button class="btn btn-danger mt-5" >
-                    <a class="text-decoration-none text-white text-capitalize" href="{{route('admin.projects.show', $project->id)}}">{{__('Vedi progetto caricato')}}</a>
+                    <a class="text-decoration-none text-white text-uppercase" href="{{route('admin.projects.show', $project->id)}}">{{__('Vedi progetto caricato')}}</a>
                 </button>
             </div>
             

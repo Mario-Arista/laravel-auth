@@ -63,9 +63,18 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Project $project)
     {
-        //
+        // Compilazione pre fillable:
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->develop_with = $request->develop_with;
+        $project->link_github = $request->link_github;
+        $project->image = $request->image;
+
+        $project->save();
+
+        return redirect()->route('admin.projects.index');
     }
 
     /**

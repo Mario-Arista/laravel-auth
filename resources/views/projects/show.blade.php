@@ -22,5 +22,15 @@
             </div>
         </div>
 
+        <div class="container py-5">
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="btn btn-danger mt-5" >
+                    <a class="text-decoration-none text-white text-uppercase" href="{{route('admin.projects.edit', $project->id)}}">{{__('Modifica progetto')}}</a>
+                </button>
+            </div>
+
+
+        </div>
+
     </main>
 @endsection
