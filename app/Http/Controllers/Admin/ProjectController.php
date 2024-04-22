@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -34,6 +35,10 @@ class ProjectController extends Controller
         $request->validated();
 
         $newProject = new Project();
+
+        $path = Storage::disk('public')->put('project_images', $request->image);
+
+        $newProject->image = $path;
 
         $newProject->fill($request->all());
 
@@ -65,9 +70,12 @@ class ProjectController extends Controller
     {
         $request->validated();
 
+        $path = Storage::disk('public')->put('project_images', $request->image);
+
+        $project->image = $path;
+
         $project->update($request->all());
 
-        $project->save();
 
         return redirect()->route('admin.projects.index');
     }

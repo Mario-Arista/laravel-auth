@@ -52,8 +52,9 @@
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">Link Immagine</label>
-                <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image') ?? $project->image }}">
+                <img src="{{asset('storage/' . $project->image)}}" alt="{{$project->name}}" class="mb-2" style="max-height: 100px;">
+                <label for="image" class="form-label">Immagine di copertina</label>
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
                 @error('image')
                 <div class="invalid-feedback">
                   {{$message}}

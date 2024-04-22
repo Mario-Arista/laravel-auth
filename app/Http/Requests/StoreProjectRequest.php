@@ -26,7 +26,7 @@ class StoreProjectRequest extends FormRequest
             'description' => 'required',
             'develop_with' => 'required|max:150',
             'link_github' => 'required',
-            'image' => 'required',
+            'image' => 'required|file|max:1024|mimes:jpg,bmp,png',
         ];
     }
 
@@ -42,7 +42,10 @@ class StoreProjectRequest extends FormRequest
             'develop_with.max' => "Questo campo deve avere massimo :max caratteri",
 
             'link_github.required' => 'Il link del progetto deve essere inserito',
-            'image.required' => "Il link dell'immagine del progetto deve essere inserito",
+
+            'image.required' => "L'immagine del progetto deve essere inserita",
+            'image.max' => "La dimensione del file non deve superare i 1024 KB",
+            'image.mimes' => "Il file deve essere un'immagine",
 
         ];
     }

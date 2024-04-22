@@ -11,7 +11,7 @@
 
             <div class="d-flex align-items-center gap-2 p-3 text-white">
             
-                <img src="{{$project->image}}" alt="{{$project->name}}" style="max-height: 300px;">
+                <img src="{{asset('storage/' . $project->image)}}" alt="{{$project->name}}" style="max-height: 300px;">
 
                 <div>
                     <div class="p-1"><strong>Nome: </strong>{{$project->name}}</div>
