@@ -19,7 +19,7 @@
         <div class="col-lg-3 col-md-3 mb-3">
 
             <div class="project d-flex flex-column align-items-center justify-content-between gap-2">
-                <img src="{{asset('storage/' . $project->image)}}" alt="{{$project->name}}">
+                <img src="{{asset('storage/' . $project->image)}}" alt="{{$project->name}}" style="max-height: 300px;">
                 <div>
                     <Strong class="text-danger">Nome:</Strong>
                     {{$project->name}}

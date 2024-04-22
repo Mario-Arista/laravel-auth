@@ -17,7 +17,7 @@
     <div class="container py-5">
         <h1>Cambia progetto</h1>
 
-        <form action="{{route('admin.projects.update', $project->id)}}"  method="POST">
+        <form action="{{route('admin.projects.update', $project->id)}}"  method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

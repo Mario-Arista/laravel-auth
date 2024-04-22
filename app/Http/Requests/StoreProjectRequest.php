@@ -44,6 +44,7 @@ class StoreProjectRequest extends FormRequest
             'link_github.required' => 'Il link del progetto deve essere inserito',
 
             'image.required' => "L'immagine del progetto deve essere inserita",
+            'image.file' => "L'immagine del progetto deve essere un file",
             'image.max' => "La dimensione del file non deve superare i 1024 KB",
             'image.mimes' => "Il file deve essere un'immagine",
 
