@@ -37,13 +37,6 @@ class ProjectController extends Controller
 
         $newProject->fill($request->all());
 
-        // // Compilazione pre fillable:
-        // $newProject->name = $request->name;
-        // $newProject->description = $request->description;
-        // $newProject->develop_with = $request->develop_with;
-        // $newProject->link_github = $request->link_github;
-        // $newProject->image = $request->image;
-
         $newProject->save();
 
         return redirect()->route('admin.projects.index');
@@ -73,13 +66,6 @@ class ProjectController extends Controller
         $request->validated();
 
         $project->update($request->all());
-
-        // Compilazione pre fillable:
-        // $project->name = $request->name;
-        // $project->description = $request->description;
-        // $project->develop_with = $request->develop_with;
-        // $project->link_github = $request->link_github;
-        // $project->image = $request->image;
 
         $project->save();
 

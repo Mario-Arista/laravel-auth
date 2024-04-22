@@ -5,13 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function index() {
 
-        $users = User::all();
+        $user = Auth::user();
         
-        return view('dashboard', compact('users'));
+        return view('dashboard', compact('user'));
     }
 }
