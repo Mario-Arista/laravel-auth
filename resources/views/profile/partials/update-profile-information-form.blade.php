@@ -1,4 +1,4 @@
-<section>
+<section class="bg-dark p-3">
     <header>
         <h2 class="text-secondary">
             {{ __('Profile Information') }}
